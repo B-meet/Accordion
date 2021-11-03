@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Question from "./component";
+import { data } from "./data";
+import "./index.css";
+
+//Parent component include a child component named Questions
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h3 className='heading'>frequently asked question about login</h3>
+      {data.map((innerData) => {
+        return <Question key={innerData.id} {...innerData} />;
+      })}
+    </main>
   );
 }
 
