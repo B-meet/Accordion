@@ -8,10 +8,12 @@ import "./index.css";
 function App() {
   return (
     <main>
-      <h3 className='heading'>frequently asked question about login</h3>
-      {data.map((innerData) => {
-        return <Question key={innerData.id} {...innerData} />;
-      })}
+      <div className='container'>
+        <h3 className='heading'>frequently asked question about login</h3>
+        {data.map((innerData) => {
+          return <Question key={innerData.id} {...innerData} />;
+        })}
+      </div>
     </main>
   );
 }

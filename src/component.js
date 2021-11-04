@@ -8,13 +8,15 @@ const Question = ({ id, title, info }) => {
 
   return (
     <section className='question-box'>
-      <h4 className='question'>{title}</h4>
-      <button
-        className='content-toggle'
-        onClick={() => setShowTheContent(!showTheContent)}
-      >
-        {showTheContent ? "-" : "+"}
-      </button>
+      <article className='quest-btn-wrap'>
+        <h4 className='question'>{title}</h4>
+        <button
+          className='btn'
+          onClick={() => setShowTheContent(!showTheContent)}
+        >
+          {showTheContent ? "-" : "+"}
+        </button>
+      </article>
       <p className='content'>{showTheContent ? info : ""}</p>
     </section>
   );
